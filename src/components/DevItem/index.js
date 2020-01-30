@@ -39,7 +39,7 @@ export default function DevItem({ dev }) {
   }
 
   async function handleEdit(data) {
-    console.log(data);
+    const response = await api.put(`/devs/${dev._id}`, data);
   }
   async function handleDelete() {
     const response = await api.delete(`/devs/${dev._id}`);
@@ -72,7 +72,7 @@ export default function DevItem({ dev }) {
         >
           {deleteDev === true ? (
             <button type="button" onClick={handleDelete}>
-              click to confirm
+              <h4>click to confirm</h4>
               <FaExclamationCircle size={20} color="#ee4d64" />
             </button>
           ) : (
@@ -105,14 +105,14 @@ export default function DevItem({ dev }) {
                 <label htmlFor="latitude">LATITUDE</label>
                 <Input
                   name="latitude"
-                  placeholder={dev.location.coordinates[0]}
+                  placeholder={dev.location.coordinates[1]}
                 />
               </div>
               <div className="input-group">
                 <label htmlFor="longitude">LONGITUDE</label>
                 <Input
                   name="longitude"
-                  placeholder={dev.location.coordinates[1]}
+                  placeholder={dev.location.coordinates[0]}
                 />
               </div>
             </div>

@@ -59,6 +59,15 @@ li.dev-item .buttons{
   justify-content: space-between;
 }
 
+li.dev-item .buttons button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+li.dev-item .buttons button h4{
+  margin-right: 10px;
+}
+
 li.dev-item button{
   background: none;
   border: 0;
@@ -100,7 +109,7 @@ li.dev-item a:hover {
   font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
-  margin: 10px 0 0 0;
+  margin: 0 0 10px 0;
 }
 .modalContainer form {
   display: flex;
@@ -152,16 +161,5 @@ li.dev-item a:hover {
   font-size: 15px;
 }
 
-/*
-   export const ModalContainer = styled.div`
-
-  >
-  }
 
 
-
-
-    }
-
-    }
-  }  */

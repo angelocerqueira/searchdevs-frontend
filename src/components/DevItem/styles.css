@@ -4,28 +4,41 @@ li.dev-item {
   box-shadow: 0 0 14 0 rgba(0, 0, 0, 0.2);
   border-radius: 2px;
   padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+li.dev-item .edit {
+  align-self: flex-end;
 }
 
-li.dev-item header {
+
+li.dev-item header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+li.dev-item header .content {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-li.dev-item header img{
+
+li.dev-item header .content img{
   width: 54px;
   height: 54px;
   border-radius: 50%;
 }
 
-li.dev-item header .user-info {
+li.dev-item header .content .user-info {
   margin-left: 10px;
 }
 
 .user-info strong {
   display: block;
   font-size: 16px;
-  color: #333;;
+  color: #333;
 }
 
 .user-info span{
@@ -33,6 +46,28 @@ li.dev-item header .user-info {
   color: #999;
   margin-top: 2px;
 }
+
+
+li.dev-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+li.dev-item .buttons{
+  display: flex;
+  justify-content: space-between;
+}
+
+li.dev-item button{
+  background: none;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 li.dev-item p {
   color: #666;
@@ -50,3 +85,83 @@ li.dev-item a {
 li.dev-item a:hover {
   color: #5a2ea6;
 }
+
+ .modalContainer {
+  display: flex;
+  flex-direction: column;
+}
+.modalContainer button {
+  align-self: flex-end;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+.modalContainer h2 {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 10px 0 0 0;
+}
+.modalContainer form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modalContainer .group {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.modalContainer .group .input-group{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.modalContainer  textarea, .modalContainer input {
+    transition: ease-in-out 1s;
+    flex: 1;
+    border: 1px solid #bbb;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.modalContainer  textarea{
+  height: 100px;
+}
+
+.modalContainer label {
+  transition: ease-in-out 1s;
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+
+}
+.modalContainer  textarea:focus {
+  border: 2px solid #bbb;
+}
+
+.modalContainer button[type='submit'] {
+  background-color: #7159c1;
+  padding: 15px 15px;
+  color: #fff;
+  border-radius: 1px;
+  border: 0;
+  width: 100%;
+  font-size: 15px;
+}
+
+/*
+   export const ModalContainer = styled.div`
+
+  >
+  }
+
+
+
+
+    }
+
+    }
+  }  */
